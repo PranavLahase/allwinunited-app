@@ -22,8 +22,8 @@
   --radius-md: 10px;
   --radius-lg: 12px;
   --radius-xl: 16px;
-  --radius-2xl: 20px;
-  --radius-3xl: 24px;
+  --radius-xxl: 20px;
+  --radius-xxxl: 24px;
 }
 
 @layer base {
@@ -52,7 +52,7 @@
     --color-accent: var(--color-accent-steel);
     --color-bg: var(--color-bg-steel);
     --color-surface: var(--color-surface-steel);
-    --radius-card: var(--radius-2xl);
+    --radius-card: var(--radius-xxl);
   }
 
   body {
@@ -64,6 +64,7 @@
 }
 
 @layer components {
+
   /* Glass Cards */
   .glass-card-light {
     background: rgba(255, 255, 255, 0.7);
@@ -72,7 +73,7 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   }
-  
+
   .glass-card-dark {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(20px);
@@ -99,7 +100,7 @@
     font-weight: 600;
     transition: all 200ms ease;
   }
-  
+
   .btn-primary-pamo:hover {
     background: #4F7C52;
     transform: translateY(-2px);
@@ -115,7 +116,7 @@
     font-size: 16px;
     font-weight: 600;
   }
-  
+
   .btn-secondary-pamo:hover {
     background: var(--color-accent-pamo);
     color: #FFFFFF;
@@ -132,7 +133,7 @@
     font-weight: 700;
     transition: all 250ms ease;
   }
-  
+
   .btn-primary-steel:hover {
     background: #CCD3DA;
     transform: translateY(-2px);
@@ -148,7 +149,7 @@
     font-size: 18px;
     font-weight: 600;
   }
-  
+
   .btn-secondary-steel:hover {
     background: var(--color-accent-steel);
     color: var(--color-bg-steel);
@@ -164,7 +165,7 @@
     color: var(--color-primary-pamo);
     transition: border-color 200ms, box-shadow 200ms;
   }
-  
+
   .input-pamo:focus {
     border-color: var(--color-accent-pamo);
     box-shadow: 0 0 0 4px rgba(95, 140, 98, 0.1);
@@ -180,13 +181,13 @@
     color: #FFFFFF;
     transition: border-color 200ms, box-shadow 200ms;
   }
-  
+
   .input-steel:focus {
     border-color: var(--color-accent-steel);
     box-shadow: 0 0 0 3px rgba(191, 197, 204, 0.1);
     outline: none;
   }
-  
+
   .input-steel::placeholder {
     color: rgba(255, 255, 255, 0.4);
   }
