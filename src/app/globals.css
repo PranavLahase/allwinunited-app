@@ -1,0 +1,193 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-allwin: #0E1A2B;
+  --color-accent-allwin: #C5CCD6;
+  --color-bg-allwin: #F1F3F5;
+
+  --color-primary-pamo: #202222;
+  --color-accent-pamo: #5F8C62;
+  --color-bg-pamo: #EFECE0;
+  --color-surface-pamo: #FFFFFF;
+
+  --color-primary-steel: #FFFFFF;
+  --color-accent-steel: #BFC5CC;
+  --color-bg-steel: #1C1F22;
+  --color-surface-steel: rgba(255, 255, 255, 0.03);
+
+  --font-sans: 'Space Grotesk', 'Nunito', 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+  --radius-3xl: 24px;
+}
+
+@layer base {
+  :root {
+    --color-primary: var(--color-primary-allwin);
+    --color-accent: var(--color-accent-allwin);
+    --color-bg: var(--color-bg-allwin);
+  }
+
+  [data-brand="allwinunited"] {
+    --color-primary: var(--color-primary-allwin);
+    --color-accent: var(--color-accent-allwin);
+    --color-bg: var(--color-bg-allwin);
+  }
+
+  [data-brand="pamo"] {
+    --color-primary: var(--color-primary-pamo);
+    --color-accent: var(--color-accent-pamo);
+    --color-bg: var(--color-bg-pamo);
+    --color-surface: var(--color-surface-pamo);
+    --radius-card: var(--radius-xl);
+  }
+
+  [data-brand="steelbridge"] {
+    --color-primary: var(--color-primary-steel);
+    --color-accent: var(--color-accent-steel);
+    --color-bg: var(--color-bg-steel);
+    --color-surface: var(--color-surface-steel);
+    --radius-card: var(--radius-2xl);
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-primary);
+    font-family: var(--font-sans);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+@layer components {
+  /* Glass Cards */
+  .glass-card-light {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  }
+  
+  .glass-card-dark {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  }
+
+  .glass-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+  }
+
+  /* PAMO Buttons */
+  .btn-primary-pamo {
+    background: var(--color-accent-pamo);
+    color: #FFFFFF;
+    border: none;
+    border-radius: var(--radius-lg);
+    padding: 16px 32px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 200ms ease;
+  }
+  
+  .btn-primary-pamo:hover {
+    background: #4F7C52;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(95, 140, 98, 0.3);
+  }
+
+  .btn-secondary-pamo {
+    background: transparent;
+    color: var(--color-accent-pamo);
+    border: 2px solid var(--color-accent-pamo);
+    border-radius: var(--radius-lg);
+    padding: 14px 30px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  .btn-secondary-pamo:hover {
+    background: var(--color-accent-pamo);
+    color: #FFFFFF;
+  }
+
+  /* SteelBridge Buttons */
+  .btn-primary-steel {
+    background: var(--color-accent-steel);
+    color: var(--color-bg-steel);
+    border: none;
+    border-radius: var(--radius-lg);
+    padding: 16px 40px;
+    font-size: 18px;
+    font-weight: 700;
+    transition: all 250ms ease;
+  }
+  
+  .btn-primary-steel:hover {
+    background: #CCD3DA;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(191, 197, 204, 0.4);
+  }
+
+  .btn-secondary-steel {
+    background: transparent;
+    color: #FFFFFF;
+    border: 2px solid var(--color-accent-steel);
+    border-radius: var(--radius-lg);
+    padding: 14px 38px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .btn-secondary-steel:hover {
+    background: var(--color-accent-steel);
+    color: var(--color-bg-steel);
+  }
+
+  /* Inputs */
+  .input-pamo {
+    background: #FFFFFF;
+    border: 2px solid rgba(32, 34, 34, 0.15);
+    border-radius: var(--radius-md);
+    padding: 14px 16px;
+    font-size: 16px;
+    color: var(--color-primary-pamo);
+    transition: border-color 200ms, box-shadow 200ms;
+  }
+  
+  .input-pamo:focus {
+    border-color: var(--color-accent-pamo);
+    box-shadow: 0 0 0 4px rgba(95, 140, 98, 0.1);
+    outline: none;
+  }
+
+  .input-steel {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(191, 197, 204, 0.2);
+    border-radius: var(--radius-md);
+    padding: 14px 16px;
+    font-size: 16px;
+    color: #FFFFFF;
+    transition: border-color 200ms, box-shadow 200ms;
+  }
+  
+  .input-steel:focus {
+    border-color: var(--color-accent-steel);
+    box-shadow: 0 0 0 3px rgba(191, 197, 204, 0.1);
+    outline: none;
+  }
+  
+  .input-steel::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+  }
+}
