@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { ArrowRight } from "lucide-react"
 
 export default function Home() {
@@ -14,8 +15,8 @@ export default function Home() {
 
             {/* Header */}
             <div className="z-10 text-center mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
-                <div className="w-24 h-24 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-[#F1F3F5] to-[#C5CCD6] shadow-[0_0_40px_rgba(197,204,214,0.2)]">
-                    <span className="text-4xl font-bold text-[#0E1A2B] tracking-tighter">AU</span>
+                <div className="w-28 h-28 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-[#F1F3F5] to-[#C5CCD6] shadow-[0_0_40px_rgba(197,204,214,0.2)] overflow-hidden p-2">
+                    <Image src="/images/logos/allwinunited-logo.png" alt="AllwinUnited" width={100} height={100} className="w-full h-full object-contain" />
                 </div>
                 <h1 className="text-4xl md:text-5xl font-bold text-white tracking-widest uppercase mb-3">AllwinUnited</h1>
                 <p className="text-[#C5CCD6] text-lg font-light tracking-wide">Your Trusted Partner</p>
@@ -30,7 +31,7 @@ export default function Home() {
                     className="group flex-1 min-h-[220px] p-8 rounded-3xl border border-white/20 bg-white/5 backdrop-blur-xl shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 hover:border-white/40 flex flex-col justify-between cursor-pointer"
                 >
                     <div className="flex justify-between items-start">
-                        <h2 className="text-3xl font-bold text-white tracking-wide">pamo</h2>
+                        <Image src="/images/logos/pamo-logo.png" alt="PAMO" width={100} height={35} className="h-9 w-auto object-contain brightness-0 invert" />
                         <ArrowRight className="w-6 h-6 text-[#C5CCD6] opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" />
                     </div>
                     <div className="mt-8">
@@ -45,7 +46,7 @@ export default function Home() {
                     className="group flex-1 min-h-[220px] p-8 rounded-3xl border border-white/20 bg-white/5 backdrop-blur-xl shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 hover:border-white/40 flex flex-col justify-between cursor-pointer"
                 >
                     <div className="flex justify-between items-start">
-                        <h2 className="text-3xl font-bold text-white tracking-normal uppercase">SteelBridge</h2>
+                        <Image src="/images/logos/steelbridge-logo.png" alt="SteelBridge" width={140} height={40} className="h-9 w-auto object-contain brightness-0 invert" />
                         <ArrowRight className="w-6 h-6 text-[#C5CCD6] opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" />
                     </div>
                     <div className="mt-8">
