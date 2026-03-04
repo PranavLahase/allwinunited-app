@@ -1,7 +1,6 @@
 'use client'
 
 import Link from "next/link"
-import Image from "next/image"
 import { ShoppingCart, Menu } from "lucide-react"
 import { useCartStore } from "@/stores/cart.store"
 
@@ -13,8 +12,8 @@ export function PamoNavbar() {
             <div className="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
 
                 {/* Logo */}
-                <Link href="/pamo" className="hover:opacity-80 transition-opacity">
-                    <Image src="/images/logos/pamo-logo.png" alt="PAMO" width={120} height={40} className="h-10 w-auto object-contain" />
+                <Link href="/pamo" className="text-[32px] font-bold text-[#202222] tracking-tight hover:opacity-80 transition-opacity">
+                    pamo
                 </Link>
 
                 {/* Desktop Links */}

@@ -2,7 +2,6 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import Image from "next/image"
 import { Menu, X } from "lucide-react"
 
 export function SteelbridgeNavbar() {
@@ -13,8 +12,8 @@ export function SteelbridgeNavbar() {
             <div className="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
 
                 {/* Logo */}
-                <Link href="/steelbridge" className="hover:opacity-80 transition-opacity">
-                    <Image src="/images/logos/steelbridge-logo.png" alt="SteelBridge" width={160} height={45} className="h-11 w-auto object-contain" />
+                <Link href="/steelbridge" className="text-[28px] font-bold text-white tracking-widest uppercase hover:opacity-80 transition-opacity">
+                    STEELBRIDGE
                 </Link>
 
                 {/* Desktop Links */}
