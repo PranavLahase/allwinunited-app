@@ -31,7 +31,7 @@ export default function Home() {
                     className="group flex-1 min-h-[220px] p-8 rounded-3xl border border-white/20 bg-white/5 backdrop-blur-xl shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 hover:border-white/40 flex flex-col justify-between cursor-pointer"
                 >
                     <div className="flex justify-between items-start">
-                        <Image src="/images/logos/pamo-logo.png" alt="PAMO" width={100} height={35} className="h-9 w-auto object-contain brightness-0 invert" />
+                        <h2 className="text-3xl font-bold text-white tracking-wide">pamo</h2>
                         <ArrowRight className="w-6 h-6 text-[#C5CCD6] opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" />
                     </div>
                     <div className="mt-8">
@@ -46,7 +46,7 @@ export default function Home() {
                     className="group flex-1 min-h-[220px] p-8 rounded-3xl border border-white/20 bg-white/5 backdrop-blur-xl shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 hover:border-white/40 flex flex-col justify-between cursor-pointer"
                 >
                     <div className="flex justify-between items-start">
-                        <Image src="/images/logos/steelbridge-logo.png" alt="SteelBridge" width={140} height={40} className="h-9 w-auto object-contain brightness-0 invert" />
+                        <h2 className="text-3xl font-bold text-white tracking-normal uppercase">SteelBridge</h2>
                         <ArrowRight className="w-6 h-6 text-[#C5CCD6] opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" />
                     </div>
                     <div className="mt-8">
